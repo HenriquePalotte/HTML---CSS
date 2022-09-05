@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<!--Não se faz formulário sem relacionar o label ao seu input-->
+<body>
+    <h1>Meu primeiro formulário</h1>
+    <form action="cadastro.php">
+        <p><label for="inome">Nome:</label>
+            <!--Name é utilizado para HTML e PHP e ID é utilizado para JS e inclusive para uso do label
+
+                No caso foi utilizado o label com ID para a ligação do nome a caixa de preenchimento.
+            
+            Sempre utilizar o label pois é a forma correta de fazer o processo de formulário-->
+             <input type="text" name="nome" id="inome"></p>
+        <p><label for="isobrenome">Sobrenome:</label>
+             <input type="text" name="sobrenome" id="isobrenome"></p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+</body>
+</html>
