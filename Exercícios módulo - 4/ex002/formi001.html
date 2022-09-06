@@ -12,16 +12,24 @@
         }
     </style>
 </head>
-<!--Não se faz formulário sem relacionar o label ao seu input-->
+<!--Não se faz formulário sem relacionar o label ao seu input
+    Existe dois metodos de envio de formulário, o que estamos usando. Por padrão é o GET onde aparece o nome e o POST retira o nome de cadastrado da URL
+
+    O GET pode utilizar quando os dados não forem sensíveis. Quando envia dados por GET só pode enviar até 3 mil bytes e se ultrapassar não é o metodo a ser utilizado e não pode usar em envio de fotos ou outro tipo de arquivos.
+
+    POST é utilizado para dados sensiveis e passando de 3 mil bytes pode ser utilizado e documentos também. Não é uma segurança total.
+
+    Para segurança total tem que estudar hattps no futuro.-->
+
+<!--Name é utilizado para HTML e PHP e ID é utilizado para JS e inclusive para uso do label
+    No caso foi utilizado o label com ID para a ligação do nome a caixa de preenchimento.
+            
+    Sempre utilizar o label pois é a forma correta de fazer o processo de formulário-->
 <body>
     <h1>Meu primeiro formulário</h1>
-    <form action="cadastro.php">
+    <form action="cadastro.php" method="post">
         <p><label for="inome">Nome:</label>
-            <!--Name é utilizado para HTML e PHP e ID é utilizado para JS e inclusive para uso do label
-
-                No caso foi utilizado o label com ID para a ligação do nome a caixa de preenchimento.
             
-            Sempre utilizar o label pois é a forma correta de fazer o processo de formulário-->
              <input type="text" name="nome" id="inome"></p>
         <p><label for="isobrenome">Sobrenome:</label>
              <input type="text" name="sobrenome" id="isobrenome"></p>
